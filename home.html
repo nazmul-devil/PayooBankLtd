@@ -75,7 +75,7 @@
                 <h1 class="font-semibold text-xl p-4">Latest Payment</h1>
                 <div class="mr-3"><a href="">View All</a></div>
             </div>
-            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+            <div id="latest-payment-history" class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
             
             </div>
         </section>
@@ -90,10 +90,10 @@
                     <fieldset class="fieldset">
                         <legend class="font-semibold text-base text-slate-700 mb-2">Select A Bank</legend>
                         <select id="bank-select-field" class="select rounded-full bg-slate-100 border-none mb-2 w-full">
-                            <option disabled selected>Pick a color</option>
-                            <option>Bkash</option>
-                            <option>Nagad</option>
-                            <option>Rocket</option>
+                            <option disabled selected>Select Bank</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Rocket">Rocket</option>
                         </select>
                         <label class="font-semibold text-base text-slate-700 mb-2">Bank Account Number</label>
                         <input id="account-number-field" type="number"
@@ -138,7 +138,7 @@
                         <input id="pin-number-to-cash-out-field" type="password"
                             class="input bg-slate-100 rounded-full border-none mb-2 w-full"
                             placeholder="Enter 4 Digit Pin number" />
-                        <button id="add-money-btn"
+                        <button id="cash-out-money-btn"
                             class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Withdraw Money</button>
                     </fieldset>
                 </div>
@@ -213,9 +213,9 @@
                         <select id="bank-select-to-pay-bill-field"
                             class="select rounded-full bg-slate-100 border-none mb-2 w-full">
                             <option disabled selected>Select Bank</option>
-                            <option>Bkash</option>
-                            <option>Nagad</option>
-                            <option>Rocket</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Rocket">Rocket</option>
                         </select>
                         <label class="font-semibold text-base text-slate-700 mb-2">Biller Account Number</label>
                         <input id="biller-account-number-field" type="number"
@@ -246,12 +246,13 @@
                 <h1 class="font-semibold text-xl p-4">Transaction History</h1>
                 <div class="mr-3"><a href="">View All</a></div>
             </div>
-            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+            <div id="transaction-history" class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
             
             </div>
         </section>
 
     </section>
+    <script src="stylesJs/utilities.js"></script>
     <script src="stylesJs/toggleButton.js"></script>
     <script src="stylesJs/addMoney.js"></script>
     <script src="stylesJs/cashOut.js"></script>

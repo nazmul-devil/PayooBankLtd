@@ -12,9 +12,14 @@
 
 <body class="bg-slate-800">
     <section class="max-w-md min-h-screen bg-slate-100 mx-auto">
+
+
+        <!-- header section -->
+
+
         <header class="bg-white pb-4 rounded-lg">
             <nav class=" flex justify-between items-center p-4 border-b-1 shadow-lg">
-                <div class="flex items-center">
+                <div id="home-button" class="cursor-pointer flex items-center">
                     <div><img src="assets/Group.png" alt=""></div>
                     <div>
                         <p class="font-extrabold text-xl"> $ <span id="current-money">45000</span></p>
@@ -22,7 +27,8 @@
                     </div>
 
                 </div>
-                <div><button id="log-out-btn" class="btn rounded-md"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log
+                <div><button id="log-out-btn" class="btn rounded-md"><i
+                            class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log
                         Out</button>
                 </div>
             </nav>
@@ -60,31 +66,195 @@
                 </div>
             </section>
         </header>
-        <h1 class="font-semibold text-xl p-4">Add Money</h1>
 
 
-        <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
-            <div class="card-body">
-                <fieldset class="fieldset">
-                    <legend class="font-semibold text-base text-slate-700 mb-2">Select A Bank</legend>
-                    <select id="bank-select-field" class="select rounded-full bg-slate-100 border-none mb-2 w-full">
-                        <option disabled selected>Pick a color</option>
-                        <option>Bkash</option>
-                        <option>Nagad</option>
-                        <option>Rocket</option>
-                      </select>
-                    <label class="font-semibold text-base text-slate-700 mb-2">Bank Account Number</label>
-                    <input id="account-number-field" type="number" class="input rounded-full bg-slate-100 border-none mb-2 w-full" placeholder="Enter 11 digit account number" />
-                    <label class="font-semibold text-base text-slate-700 mb-2">Amount to Add</label>
-                    <input id="amount-to-add-field" type="number" class="input rounded-full bg-slate-100 border-none mb-2 w-full" placeholder="Add Amount to add money" />
-                    <label class="font-semibold text-base text-slate-700 mb-2">Pin Number</label>
-                    <input id="pin-number-field" type="password" class="input bg-slate-100 rounded-full border-none mb-2 w-full" placeholder="Enter 4 Digit Pin number" />
-                    <button id="add-money-btn" class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Add Money</button>
-                </fieldset>
+        <!-- latest Payment section -->
+
+        <section id="latest-payment-section">
+            <div class="flex justify-between items-center ">
+                <h1 class="font-semibold text-xl p-4">Latest Payment</h1>
+                <div class="mr-3"><a href="">View All</a></div>
             </div>
-        </div>
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+            
+            </div>
+        </section>
+
+        <!-- add money section -->
+        <section id="add-money-section">
+            <h1 class="font-semibold text-xl p-4">Add Money</h1>
+
+
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <legend class="font-semibold text-base text-slate-700 mb-2">Select A Bank</legend>
+                        <select id="bank-select-field" class="select rounded-full bg-slate-100 border-none mb-2 w-full">
+                            <option disabled selected>Pick a color</option>
+                            <option>Bkash</option>
+                            <option>Nagad</option>
+                            <option>Rocket</option>
+                        </select>
+                        <label class="font-semibold text-base text-slate-700 mb-2">Bank Account Number</label>
+                        <input id="account-number-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Enter 11 digit account number" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Amount to Add</label>
+                        <input id="amount-to-add-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Add Amount to add money" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Pin Number</label>
+                        <input id="pin-number-field" type="password"
+                            class="input bg-slate-100 rounded-full border-none mb-2 w-full"
+                            placeholder="Enter 4 Digit Pin number" />
+                        <button id="add-money-btn" class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Add
+                            Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--cash out section  -->
+
+        <section id="cash-out-section">
+            <h1 class="font-semibold text-xl p-4">Cash Out</h1>
+
+
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-semibold text-base text-slate-700 mb-2">Agent Number</label>
+                        <input id="agent-number-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Enter 11 digit number" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Amount</label>
+                        <input id="amount-to-cash-out-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Add Amount to add money" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Pin Number</label>
+                        <input id="pin-number-to-cash-out-field" type="password"
+                            class="input bg-slate-100 rounded-full border-none mb-2 w-full"
+                            placeholder="Enter 4 Digit Pin number" />
+                        <button id="add-money-btn"
+                            class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Withdraw Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- money transfer section -->
+
+
+        <section id="money-transfer-section">
+            <h1 class="font-semibold text-xl p-4">Transfer Money</h1>
+
+
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-semibold text-base text-slate-700 mb-2">User Account Number</label>
+                        <input id="User-account-number-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Enter 11 digit number" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Amount</label>
+                        <input id="amount-to-transfer-out-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Add Amount to add money" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Pin Number</label>
+                        <input id="pin-number-to-transfer-money-field" type="password"
+                            class="input bg-slate-100 rounded-full border-none mb-2 w-full"
+                            placeholder="Enter 4 Digit Pin number" />
+                        <button id="transfer-money-btn"
+                            class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Send Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- get bonus section -->
+
+
+        <section id="get-bonus-section">
+            <h1 class="font-semibold text-xl p-4">Get Bonus</h1>
+
+
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-semibold text-base text-slate-700 mb-2">Enter Bonus Coupon</label>
+                        <input id="bonus-coupon-number-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Enter 11 digit number" />
+                        <button id="get-bonus-btn" class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Get
+                            Bonus</button>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- pay bill section -->
+        <section id="pay-bill-section">
+            <h1 class="font-semibold text-xl p-4">Pay Bill</h1>
+
+
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <legend class="font-semibold text-base text-slate-700 mb-2">Select To Pay</legend>
+                        <select id="bank-select-to-pay-bill-field"
+                            class="select rounded-full bg-slate-100 border-none mb-2 w-full">
+                            <option disabled selected>Select Bank</option>
+                            <option>Bkash</option>
+                            <option>Nagad</option>
+                            <option>Rocket</option>
+                        </select>
+                        <label class="font-semibold text-base text-slate-700 mb-2">Biller Account Number</label>
+                        <input id="biller-account-number-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Enter 11 digit account number" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Amount to Pay</label>
+                        <input id="amount-to-pay-bill-field" type="number"
+                            class="input rounded-full bg-slate-100 border-none mb-2 w-full"
+                            placeholder="Add Amount to add money" />
+                        <label class="font-semibold text-base text-slate-700 mb-2">Pin Number</label>
+                        <input id="pay-bill-pin-number-field" type="password"
+                            class="input bg-slate-100 rounded-full border-none mb-2 w-full"
+                            placeholder="Enter 4 Digit Pin number" />
+                        <button id="pay-bill-btn" class="btn bg-blue-600 mt-4 rounded-full border-none text-white">Pay
+                            Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Transaction section -->
+
+
+        <section id="transaction-section">
+            <div class="flex justify-between items-center ">
+                <h1 class="font-semibold text-xl p-4">Transaction History</h1>
+                <div class="mr-3"><a href="">View All</a></div>
+            </div>
+            <div class="card bg-base-100 mx-auto w-[90%] shrink-0 shadow-2xl">
+            
+            </div>
+        </section>
+
     </section>
+    <script src="stylesJs/toggleButton.js"></script>
     <script src="stylesJs/addMoney.js"></script>
+    <script src="stylesJs/cashOut.js"></script>
 </body>
 
 </html>

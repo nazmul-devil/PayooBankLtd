@@ -16,20 +16,22 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
             if(confirmation){
                 const sum = converTedAmmount + converTedCurrentAmmount;
                 setInnerText("current-money", sum);
+                alert("Successful");
             }
            }
            else{
             alert("Please add a valid amount of money");
+            document.getElementById('amount-to-add-field').value="";
            }
         }
         else{
             alert("Please Enter a Valid Pin Number");
+            document.getElementById('pin-number-field').value="";
         }
     }
-    document.getElementById('account-number-field').value="";
-    document.getElementById('pin-number-field').value="";
-    document.getElementById('amount-to-add-field').value="";
-    
+    else{
+        document.getElementById('account-number-field').value="";
+    }  
 })
 
 

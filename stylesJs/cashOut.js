@@ -6,7 +6,7 @@ document.getElementById("cash-out-money-btn").addEventListener("click", function
     const ammountToCashOut = getValueByID("amount-to-cash-out-field");
     const converTedAmmountCashOut = parseFloat(ammountToCashOut);
     const converTedCurrentAmmount = convertInnerText("current-money");
-
+let cashOutCounter = 0;
     if (validationAgentNumber === true) {
 
         if (cashOutPinNumber === "1422") {
@@ -15,6 +15,7 @@ document.getElementById("cash-out-money-btn").addEventListener("click", function
             if(confirmation){
                 const diff =converTedCurrentAmmount-converTedAmmountCashOut;
                 setInnerText("current-money", diff);
+                cashOutCounter++;
                 alert("Successful");
             }
            }
@@ -30,6 +31,12 @@ document.getElementById("cash-out-money-btn").addEventListener("click", function
     }
     else{
         document.getElementById('agent-number-field').value="";
+    }
+
+    if (cashOutCounter >= 1){
+        document.getElementById('agent-number-field').value = "";
+        document.getElementById('pin-number-to-cash-out-field').value = "";
+        document.getElementById('amount-to-cash-out-field').value = "";
     }
     
 })

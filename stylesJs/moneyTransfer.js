@@ -6,20 +6,21 @@ document.getElementById("transfer-money-btn").addEventListener("click", function
     const ammountToTransfer = getValueByID("amount-to-transfer-out-field");
     const converTedAmmountTransfer = parseFloat(ammountToTransfer);
     const converTedCurrentAmmount = convertInnerText("current-money");
-
+let transferCounter = 0;
     if (validationUserNumber === true) {
 
         if (transferMoneyPinNumber === "1422") {
-            if (converTedAmmountTransfer<=converTedCurrentAmmount) {
+            if (converTedAmmountTransfer <= converTedCurrentAmmount) {
                 let confirmation = confirm("Please confirm to  Transfer Money");
                 if (confirmation) {
                     const transMoney = converTedCurrentAmmount - converTedAmmountTransfer;
                     setInnerText("current-money", transMoney);
+                    transferCounter++;
                     alert("Successful");
                 }
             }
             else {
-                alert("Please enter a valid amount to transfer money and try again.");
+                alert("Sorry,you haven't sufficient amount to transfer money. Please add money and try again.");
                 document.getElementById('amount-to-transfer-out-field').value = "";
             }
         }
@@ -28,9 +29,15 @@ document.getElementById("transfer-money-btn").addEventListener("click", function
             document.getElementById('pin-number-to-transfer-money-field').value = "";
         }
     }
-    else{
+    else {
         document.getElementById('User-account-number-field').value = "";
     }
+    if (transferCounter >= 1) {
+        document.getElementById('User-account-number-field').value = "";
+        document.getElementById('pin-number-to-transfer-money-field').value = "";
+        document.getElementById('amount-to-transfer-out-field').value = "";
+    }
+
 })
 
 

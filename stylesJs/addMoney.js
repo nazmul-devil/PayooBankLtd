@@ -7,7 +7,7 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
     const ammountToAdd = getValueByID("amount-to-add-field");
     const converTedAmmount = parseFloat(ammountToAdd);
     const converTedCurrentAmmount = convertInnerText("current-money");
-
+let addMoneyCounter = 0;
     if (validationNumber === true) {
 
         if (addMoneyPinNumber === "1422") {
@@ -16,6 +16,7 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
             if(confirmation){
                 const sum = converTedAmmount + converTedCurrentAmmount;
                 setInnerText("current-money", sum);
+                addMoneyCounter++;
                 alert("Successful");
             }
            }
@@ -31,7 +32,14 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
     }
     else{
         document.getElementById('account-number-field').value="";
-    }  
+    } 
+    
+    
+    if (addMoneyCounter >= 1){
+        document.getElementById('account-number-field').value = "";
+        document.getElementById('pin-number-field').value = "";
+        document.getElementById('amount-to-add-field').value = "";
+    }
 })
 
 

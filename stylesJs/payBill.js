@@ -18,6 +18,29 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (even
                     setInnerText("current-money", sum);
                     billerNumber++;
                     alert("Successful");
+
+
+
+
+                    let div = document.createElement('div');
+                    const now = new Date();
+                    div.innerHTML = `
+                    <div class=" childOfHistory bg-white rounded-lg flex items-center justify-between p-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="rounded-full p-4 bg-slate-100 "><img src="assets/wallet1.png" alt=""></div>
+                            <div>
+                                <h1 class="text-lg font-semibold">Pay Bill</h1>
+                                <p>${selectABank}<br>Biller Account Number: <span>${billerAccountNumber}</span><br>Amount : <span class="text-red-600">${ammountToPay}</span></p>
+                                <p>Time : <span>${now}</span></p>
+                            </div>
+                        </div>
+                        <div class="mr-5"><i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    
+                    `
+                    document.getElementById("transaction-history").appendChild(div);
+
                 }
             }
             else {
@@ -34,7 +57,7 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (even
         document.getElementById('biller-account-number-field').value = "";
     }
 
-    if (billerNumber >= 1){
+    if (billerNumber >= 1) {
         document.getElementById('biller-account-number-field').value = "";
         document.getElementById('pay-bill-pin-number-field').value = "";
         document.getElementById('amount-to-pay-bill-field').value = "";

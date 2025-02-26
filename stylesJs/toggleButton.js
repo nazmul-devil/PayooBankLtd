@@ -24,6 +24,11 @@ document.getElementById("home-button").addEventListener("click", function (event
     document.getElementById("get-bonus-section").style.display = "none";
     document.getElementById("pay-bill-section").style.display = "none";
     document.getElementById("transaction-section").style.display = "none";
+   
+   
+
+    
+
 
 });
 
